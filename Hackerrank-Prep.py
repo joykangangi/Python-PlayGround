@@ -32,4 +32,19 @@ def median(numbers):
         return (sorted_numbers[mid - 1] + sorted_numbers[mid]) / 2
     else:
         # if there are an odd number of elements, return the middle element
-        return sorted_numbers[mid]         
+        return sorted_numbers[mid]        
+    
+    
+def diagonalDifference(arr):
+     leftSum = 0
+     rightSum = 0
+     for i in range(len(arr)):
+         leftSum = leftSum + arr[i][i]
+         i = i+1 
+ 
+     j=0
+     for i in reversed(range(len(arr))):
+         rightSum = rightSum + arr[i][j]
+         j = j+1
+         i = i-1 
+     return abs(leftSum - rightSum)       
