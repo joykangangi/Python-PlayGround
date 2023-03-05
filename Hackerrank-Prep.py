@@ -1,4 +1,5 @@
-# challenges practiced today:
+#The questions can be found online(hackerrank) by searching the functions definitions
+# challenges practiced Day1:
 def timeConversion(s):
     lastChar = s[-2]
     if(lastChar == 'P'):
@@ -48,3 +49,13 @@ def diagonalDifference(arr):
          j = j+1
          i = i-1 
      return abs(leftSum - rightSum)       
+
+# Day2:
+# this one is very easy but understanding it was difficult.
+# Mainly, I was not understanding how P2 wins when the tower height = 1. 
+# But from online searches, P1 wont have any valid move to make
+# so it's like P2 will win cause P1 is stuck.
+def towerBreakers(n, m):
+    specialOne = m == 1
+    p2win = n % 2 == 0
+    return 2 if specialOne or p2win else 1
